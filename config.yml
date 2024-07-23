@@ -1,0 +1,48 @@
+# Site settings
+title: My Personal Blog
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Welcome to my personal blog where I share insights, tutorials, and more.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://localhost:4000" # the base hostname & protocol for your site
+
+# Social media settings
+twitter_username: your_twitter_username
+github_username:  your_github_username
+linkedin_username: your_linkedin_username
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude these files from the site build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Dockerfile
+  - docker-compose.yml
+
+# Plugins configuration
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Defaults
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Your Name"
+
+# Configuration for the minima theme
+minima:
+  social_links:
+    twitter: your_twitter_username
+    github: your_github_username
+    linkedin: your_linkedin_username
